@@ -8,7 +8,7 @@
   :root{
     --teal:#0e7c86; --teal-dark:#0a5d66; --blue:#146b8c;
     --sand:#f6efe4; --orange:#e8862e; --ink:#263238; --muted:#5c6b73;
-    --line:#e4e9ec; --bg:#eef2f4; --new:#3a9d46;
+    --line:#e4e9ec; --bg:#eef2f4; --green:#3a9d46;
   }
   *{box-sizing:border-box;}
   body{margin:0; background:var(--bg); color:var(--ink);
@@ -30,6 +30,11 @@
     border-bottom:3px solid var(--sand); padding-bottom:8px;}
   p{margin:10px 0;}
   a{color:var(--blue); text-decoration:none;} a:hover{text-decoration:underline;}
+
+  .legend{font-size:14px; color:var(--muted); margin:6px 0 0;}
+  .pin{color:var(--teal-dark); font-weight:600; font-size:11.5px; background:#eaf3f6;
+    border:1px solid #bfdce3; border-radius:4px; padding:1px 6px; margin-left:6px;
+    vertical-align:1px; white-space:nowrap;}
 
   .day{margin:22px 0; border:1px solid var(--line); border-radius:14px; overflow:hidden;}
   .day-head{display:flex; align-items:center; gap:14px; padding:16px 20px;
@@ -59,8 +64,6 @@
   ul{margin:6px 0 12px; padding-left:22px;}
   li{margin:4px 0;}
   li b{color:#1b4f72;}
-  .new{color:var(--new); font-weight:700; font-size:12px; border:1px solid #b9e0c1; background:#eaf6e8;
-    border-radius:4px; padding:1px 6px; margin-left:6px; vertical-align:1px;}
 
   .tip{background:#fff6e8; border-left:4px solid var(--orange); border-radius:8px;
     padding:12px 16px; margin:12px 0; font-size:14.5px;}
@@ -68,7 +71,7 @@
   .info{background:#eaf3f6; border-left:4px solid var(--teal); border-radius:8px;
     padding:12px 16px; margin:12px 0; font-size:14.5px;}
   .info b:first-child{color:var(--teal-dark);}
-  .must{background:#eaf6e8; border-left:4px solid var(--new); border-radius:8px;
+  .must{background:#eaf6e8; border-left:4px solid var(--green); border-radius:8px;
     padding:12px 16px; margin:12px 0; font-size:14.5px;}
   .must b:first-child{color:#23753b;}
 
@@ -121,17 +124,18 @@
   <div class="content">
 
     <h2 class="section">🗺️ Ogólny zarys tygodnia</h2>
-    <p>Październik to idealny moment: ~20–24°C, mniej tłumów, wszystko nadal otwarte (choć bywa deszczowo — październik i listopad to najwilgotniejsze miesiące). Santa Ponsa to świetna baza — 25 min do Palmy, blisko do zachodniego wybrzeża i wejścia w góry Serra de Tramuntana (UNESCO). Na północ i wschód wyspy licz 1–1,5 h jazdy. Wszystkie Twoje pinezki z listy Google (28 miejsc) są wplecione w plan — nowe pozycje oznaczam <span class="new">🆕</span>.</p>
+    <p>Październik to idealny moment: ~20–24°C, mniej tłumów, wszystko nadal otwarte (choć bywa deszczowo — październik i listopad to najwilgotniejsze miesiące). Santa Ponsa to świetna baza — 25 min do Palmy, blisko do zachodniego wybrzeża i wejścia w góry Serra de Tramuntana (UNESCO). Na północ i wschód wyspy licz 1–1,5 h jazdy.</p>
+    <p class="legend"><span class="pin">📍</span> = miejsce z Twojej listy Google Maps (pinezka) — to podstawa planu.</p>
     <table>
       <tr><th>Data</th><th>Region</th><th>Najważniejsze punkty</th></tr>
       <tr><td><b>6.10 (wt)</b></td><td>Przylot</td><td>Odbiór auta, przejazd do Santa Ponsa, zameldowanie</td></tr>
-      <tr><td><b>7.10 (śr)</b></td><td>Palma de Mallorca</td><td>La Seu, Almudaina, fontanna żółwi, Bellver</td></tr>
-      <tr><td><b>8.10 (czw)</b></td><td>Serra de Tramuntana I</td><td>🥾 <b>Szlak Arcyksięcia</b>, Valldemossa, Deià, Fornalutx, Sóller</td></tr>
-      <tr><td><b>9.10 (pt)</b></td><td>Północ</td><td>Alcúdia, Mirador Es Colomer, Cap de Formentor</td></tr>
-      <tr><td><b>10.10 (sob)</b></td><td>Południowy wschód</td><td>Targ Santanyí, Caló del Moro, Parc de Mondragó</td></tr>
-      <tr><td><b>11.10 (nd)</b></td><td>Wschodnie wybrzeże</td><td>Cuevas del Drach, Coves d'Artà, Capdepera</td></tr>
-      <tr><td><b>12.10 (pn)</b></td><td>Serra de Tramuntana II</td><td>Sa Calobra, Torrent de Pareis, Lluc, Campanet</td></tr>
-      <tr><td><b>13.10 (wt)</b></td><td>Wylot</td><td>Es Trenc rano, oddanie auta, lot 21:20</td></tr>
+      <tr><td><b>7.10 (śr)</b></td><td>Palma de Mallorca</td><td>La Seu 📍, Almudaina, fontanna żółwi 📍, Bellver</td></tr>
+      <tr><td><b>8.10 (czw)</b></td><td>Serra de Tramuntana I</td><td>🥾 <b>Szlak Arcyksięcia</b>, Valldemossa 📍, Deià 📍, Fornalutx 📍, Sóller 📍</td></tr>
+      <tr><td><b>9.10 (pt)</b></td><td>Północ</td><td>Alcúdia, Mirador Es Colomer 📍, Cap de Formentor 📍</td></tr>
+      <tr><td><b>10.10 (sob)</b></td><td>Południowy wschód</td><td>Targ Santanyí, Caló del Moro 📍, Parc de Mondragó 📍</td></tr>
+      <tr><td><b>11.10 (nd)</b></td><td>Wschodnie wybrzeże</td><td>Cuevas del Drach 📍, Coves d'Artà 📍, Capdepera 📍</td></tr>
+      <tr><td><b>12.10 (pn)</b></td><td>Serra de Tramuntana II</td><td>Sa Calobra 📍, Torrent de Pareis 📍, Lluc 📍, Campanet</td></tr>
+      <tr><td><b>13.10 (wt)</b></td><td>Wylot</td><td>Es Trenc 📍 rano, oddanie auta, lot 21:20</td></tr>
     </table>
 
     <!-- ===================== DZIEŃ 1 ===================== -->
@@ -152,9 +156,9 @@
 
         <h4 class="block">Do zobaczenia</h4>
         <ul>
-          <li><b>Katedra La Seu</b> — gotycka katedra z XIII w., rozeta o średnicy 12 m i ołtarz w formie korony cierniowej wg projektu Gaudiego. Bilety z wyprzedzeniem: <a href="https://catedraldemallorca.org/en/visits/tours/" target="_blank">catedraldemallorca.org</a>.</li>
+          <li><b>Katedra La Seu</b> <span class="pin">📍</span> — gotycka katedra z XIII w., rozeta o średnicy 12 m i ołtarz w formie korony cierniowej wg projektu Gaudiego. Bilety z wyprzedzeniem: <a href="https://catedraldemallorca.org/en/visits/tours/" target="_blank">catedraldemallorca.org</a>.</li>
           <li><b>Pałac Królewski La Almudaina</b> — dawny pałac mauretański, dziś reprezentacyjna rezydencja królewska, tuż obok katedry. Bilety: <a href="https://tickets.patrimonionacional.es/" target="_blank">patrimonionacional.es</a>.</li>
-          <li><b>Font de les Tortugues (fontanna żółwi)</b> <span class="new">🆕</span> — fontanna z Twojej listy, w ogrodach S'Hort del Rei tuż przy katedrze i Almudainie.</li>
+          <li><b>Font de les Tortugues (fontanna żółwi)</b> <span class="pin">📍</span> — fontanna z Twojej listy, w ogrodach S'Hort del Rei tuż przy katedrze i Almudainie.</li>
           <li><b>Parc de la Mar</b> — jeziorko i trawniki pod katedrą, klasyczne miejsce na zdjęcie.</li>
           <li><b>Zamek Bellver</b> — unikalny okrągły gotycki zamek (1300–1311) na wzgórzu, z widokiem na miasto i zatokę. Parking mały — lepiej pieszo (430 schodów) lub autobusem. Bilety: <a href="https://castelldebellver.palma.es/" target="_blank">castelldebellver.palma.es</a>.</li>
           <li><b>Stara dzielnica</b> — wąskie uliczki, kościoły, place; spokojny spacer i kawa.</li>
@@ -163,7 +167,7 @@
         <div class="day-map"><img src="mapy/mapa-1.png" alt="Mapa Palmy" onerror="this.onerror=null;this.src='https://maps.wikimedia.org/img/osm-intl,12,39.569,2.650,800x360.png?lang=en';">
           <div class="cap">📍 Palma de Mallorca — <a href="https://www.google.com/maps/search/?api=1&query=Palma+Cathedral" target="_blank">otwórz w Google Maps</a> · mapa © OpenStreetMap</div></div>
 
-        <div class="info"><b>Opcjonalnie:</b> <b>Palma Aquàrium</b> <span class="new">🆕</span> — duże akwarium przy Playa de Palma; wygodne dziś <i>albo</i> w dniu wylotu (13.10, bo leży blisko lotniska).</div>
+        <div class="info"><b>Opcjonalnie:</b> <b>Palma Aquàrium</b> <span class="pin">📍</span> — duże akwarium przy Playa de Palma; wygodne dziś <i>albo</i> w dniu wylotu (13.10, bo leży blisko lotniska).</div>
         <div class="info"><b>Wieczór:</b> kolacja na tapas w dzielnicy <b>Santa Catalina</b> albo spacer po Passeig del Born.</div>
         <div class="tip"><b>Parking:</b> wjedź od razu do garażu przy Passeig Marítim i zwiedzaj pieszo — starówka to labirynt wąskich jednokierunkowych uliczek.</div>
       </div>
@@ -201,20 +205,20 @@
 
         <h4 class="block">Popołudnie — po szlaku</h4>
         <ul>
-          <li><b>Valldemossa</b> — klasztor kartuzów i <b>Muzeum Chopina</b> (Chopin z George Sand zimą 1838/39).</li>
-          <li><b>Deià</b> — artystyczna wioska; tu pochowany jest pisarz Robert Graves.</li>
-          <li><b>Sa Foradada</b> <span class="new">🆕</span> — punkt widokowy na skalną formację z „oknem” w morzu, przy drodze Deià–Valldemossa.</li>
-          <li><b>Sóller</b> — plac z zabytkowym tramwajem, kościół Sant Bartomeu, świeży sok pomarańczowy.</li>
-          <li><b>Fornalutx</b> <span class="new">🆕</span> — uznawane za jedno z najpiękniejszych miasteczek Hiszpanii (kamienne domy, brukowane uliczki).</li>
-          <li><b>Jardí Botànic de Sóller (ogród botaniczny)</b> <span class="new">🆕</span> — kolekcja roślin Balearów, tuż za Sóller.</li>
-          <li><b>Port de Sóller</b> — przejazd zabytkowym tramwajem (~30 min), piaszczysta plaża, kolacja rybna.</li>
+          <li><b>Valldemossa</b> <span class="pin">📍</span> — klasztor kartuzów i <b>Muzeum Chopina</b> (Chopin z George Sand zimą 1838/39).</li>
+          <li><b>Deià</b> <span class="pin">📍</span> — artystyczna wioska; tu pochowany jest pisarz Robert Graves.</li>
+          <li><b>Sa Foradada</b> <span class="pin">📍</span> — punkt widokowy na skalną formację z „oknem” w morzu, przy drodze Deià–Valldemossa.</li>
+          <li><b>Sóller</b> <span class="pin">📍</span> — plac z zabytkowym tramwajem, kościół Sant Bartomeu, świeży sok pomarańczowy.</li>
+          <li><b>Fornalutx</b> <span class="pin">📍</span> — uznawane za jedno z najpiękniejszych miasteczek Hiszpanii (kamienne domy, brukowane uliczki).</li>
+          <li><b>Jardí Botànic de Sóller (ogród botaniczny)</b> <span class="pin">📍</span> — kolekcja roślin Balearów, tuż za Sóller.</li>
+          <li><b>Port de Sóller</b> <span class="pin">📍</span> — przejazd zabytkowym tramwajem (~30 min), piaszczysta plaża, kolacja rybna.</li>
         </ul>
 
         <div class="day-map"><img src="mapy/mapa-2.png" alt="Mapa okolic Valldemossy i Sóller" onerror="this.onerror=null;this.src='https://maps.wikimedia.org/img/osm-intl,10,39.740,2.630,800x360.png?lang=en';">
           <div class="cap">📍 Okolice Valldemossa–Deià–Sóller — <a href="https://www.google.com/maps/search/?api=1&query=Cam%C3%AD%20de%20s%27Arxiduc%2C%20Valldemossa" target="_blank">otwórz szlak w Google Maps</a> · mapa © OpenStreetMap</div></div>
 
-        <div class="info"><b>Wariant szlaku:</b> zamiast Szlaku Arcyksięcia możesz przejść <b>Barranc de Biniaraix</b> <span class="new">🆕</span> — kamienisty wąwóz startujący z Sóller (widokowa, bardziej „dzika” trasa).</div>
-        <div class="info"><b>Powrót:</b> wracaj nadmorską <b>MA-10</b> przez <b>Banyalbufar</b> <span class="new">🆕</span> (tarasowe winnice nad morzem) i <b>Estellencs</b> — punkty widokowe na klify.</div>
+        <div class="info"><b>Wariant szlaku:</b> zamiast Szlaku Arcyksięcia możesz przejść <b>Barranc de Biniaraix</b> <span class="pin">📍</span> — kamienisty wąwóz startujący z Sóller (widokowa, bardziej „dzika” trasa).</div>
+        <div class="info"><b>Powrót:</b> wracaj nadmorską <b>MA-10</b> przez <b>Banyalbufar</b> <span class="pin">📍</span> (tarasowe winnice nad morzem) i <b>Estellencs</b> <span class="pin">📍</span> — punkty widokowe na klify.</div>
         <div class="tip"><b>Jedzenie w porcie:</b> <b>Kingfisher</b> bywa pełny — obok polecana <b>Só Caprichos</b> (taras, widok na port). <a href="https://maps.app.goo.gl/hetsgAxJ3j9RtTJS6" target="_blank">Mapa →</a></div>
         <div class="info"><b>Gdyby padało:</b> szlak przełóż na 12.10, a dziś zrób spokojniej: Valldemossa → Deià → Sóller + tramwaj do Port de Sóller.</div>
       </div>
@@ -240,9 +244,9 @@
         <ul>
           <li><b>Alcúdia</b> — stare miasto w murach obronnych; obok ruiny rzymskiej Pollentii.</li>
           <li><b>Port de Pollença</b> — nadmorska promenada (miejsce akcji opowiadania Agathy Christie „Problem at Pollensa Bay”).</li>
-          <li><b>Mirador de Es Colomer</b> — jeden z najpiękniejszych punktów widokowych wyspy; parking przy wejściu, dojście łatwe. <a href="https://maps.app.goo.gl/FwZEREBtYWJnqSyi6" target="_blank">Mapa →</a> Dla chętnych szlak na <b>Talaia d'Albercutx</b>.</li>
+          <li><b>Mirador de Es Colomer</b> <span class="pin">📍</span> — jeden z najpiękniejszych punktów widokowych wyspy; parking przy wejściu, dojście łatwe. <a href="https://maps.app.goo.gl/FwZEREBtYWJnqSyi6" target="_blank">Mapa →</a> Dla chętnych szlak na <b>Talaia d'Albercutx</b>.</li>
           <li><b>Platja de Formentor</b> — piękna plaża z widokiem na góry (parking mały, płatny).</li>
-          <li><b>Cap de Formentor / latarnia</b> — latarnia z 1863 r. na końcu klifu, 11 km krętej drogi. <a href="https://maps.app.goo.gl/EFJRKJzwwudyAuz2A" target="_blank">Mapa →</a></li>
+          <li><b>Cap de Formentor / latarnia</b> <span class="pin">📍</span> — latarnia z 1863 r. na końcu klifu, 11 km krętej drogi. <a href="https://maps.app.goo.gl/EFJRKJzwwudyAuz2A" target="_blank">Mapa →</a></li>
         </ul>
 
         <div class="day-map"><img src="mapy/mapa-3.png" alt="Mapa półwyspu Formentor" onerror="this.onerror=null;this.src='https://maps.wikimedia.org/img/osm-intl,10,39.930,3.170,800x360.png?lang=en';">
@@ -272,10 +276,10 @@
         <h4 class="block">Do zobaczenia</h4>
         <ul>
           <li><b>Targ w Santanyí</b> (środy i soboty) — lokalne produkty, rękodzieło; kamieniczki z piaskowca <i>marès</i>. Lunch: <b>Sa Botiga</b> przy kościele Sant Andreu. <a href="https://maps.app.goo.gl/LzCrG9urVQ2cavtTA" target="_blank">Mapa →</a></li>
-          <li><b>Caló del Moro</b> — malownicza zatoczka z turkusową wodą (zejście po skałkach). <a href="https://maps.app.goo.gl/PpY2Wbfmvbz7ZjRJ7" target="_blank">Mapa →</a></li>
+          <li><b>Caló del Moro</b> <span class="pin">📍</span> — malownicza zatoczka z turkusową wodą (zejście po skałkach). <a href="https://maps.app.goo.gl/PpY2Wbfmvbz7ZjRJ7" target="_blank">Mapa →</a></li>
           <li><b>Mirador del Pontàs</b> — naturalny skalny most w morzu. <a href="https://maps.app.goo.gl/AaWSRrPK6SWBWHqF9" target="_blank">Mapa →</a></li>
-          <li><b>Parc natural de Mondragó</b> <span class="new">🆕</span> — park przyrody ze ścieżkami wśród pól i zatoczek.</li>
-          <li><b>Cala Mondragó (S'Amarador)</b> <span class="new">🆕</span> — piaszczysta plaża na terenie parku, spokojniejsza od turystycznych kurortów.</li>
+          <li><b>Parc natural de Mondragó</b> <span class="pin">📍</span> — park przyrody ze ścieżkami wśród pól i zatoczek.</li>
+          <li><b>Cala Mondragó (S'Amarador)</b> <span class="pin">📍</span> — piaszczysta plaża na terenie parku, spokojniejsza od turystycznych kurortów.</li>
         </ul>
 
         <div class="day-map"><img src="mapy/mapa-4.png" alt="Mapa Santanyí i Mondragó" onerror="this.onerror=null;this.src='https://maps.wikimedia.org/img/osm-intl,11,39.420,3.120,800x360.png?lang=en';">
@@ -303,11 +307,11 @@
 
         <h4 class="block">Do zobaczenia (kolejno wzdłuż wybrzeża)</h4>
         <ul>
-          <li><b>Cuevas del Drach</b> (Porto Cristo) — najsłynniejsze jaskinie wyspy z podziemnym jeziorem Martel i koncertem na łodziach. Rezerwacja z wyprzedzeniem. <a href="https://maps.app.goo.gl/Sip6qsmzj5Y48VnMA" target="_blank">Mapa →</a></li>
-          <li><b>Safari Mallorca</b> <span class="new">🆕</span> — Safari Zoo koło Sa Coma (opcjonalnie, jeśli lubicie zoo; to 2–3 h).</li>
-          <li><b>Coves d'Artà</b> — jaskinie na klifie nad morzem, stalaktyty do 22 m, pokaz świetlno-dźwiękowy w komorze „Piekło”; ~45 min z przewodnikiem, 16 €. <a href="https://experiences.cuevasdearta.com/en/" target="_blank">cuevasdearta.com</a></li>
-          <li><b>Ses Païsses</b> <span class="new">🆕</span> — osada talajotyczna (muzeum archeologiczne na wolnym powietrzu) tuż przy Artà.</li>
-          <li><b>Capdepera</b> <span class="new">🆕</span> — miasteczko i największy, najlepiej zachowany zamek na wyspie (Castell de Capdepera) z widokiem na okolicę.</li>
+          <li><b>Cuevas del Drach</b> <span class="pin">📍</span> (Porto Cristo) — najsłynniejsze jaskinie wyspy z podziemnym jeziorem Martel i koncertem na łodziach. Rezerwacja z wyprzedzeniem. <a href="https://maps.app.goo.gl/Sip6qsmzj5Y48VnMA" target="_blank">Mapa →</a></li>
+          <li><b>Safari Mallorca</b> <span class="pin">📍</span> — Safari Zoo koło Sa Coma (opcjonalnie, jeśli lubicie zoo; to 2–3 h).</li>
+          <li><b>Coves d'Artà</b> <span class="pin">📍</span> — jaskinie na klifie nad morzem, stalaktyty do 22 m, pokaz świetlno-dźwiękowy w komorze „Piekło”; ~45 min z przewodnikiem, 16 €. <a href="https://experiences.cuevasdearta.com/en/" target="_blank">cuevasdearta.com</a></li>
+          <li><b>Ses Païsses</b> <span class="pin">📍</span> — osada talajotyczna (muzeum archeologiczne na wolnym powietrzu) tuż przy Artà.</li>
+          <li><b>Capdepera</b> <span class="pin">📍</span> — miasteczko i największy, najlepiej zachowany zamek na wyspie (Castell de Capdepera) z widokiem na okolicę.</li>
         </ul>
 
         <div class="day-map"><img src="mapy/mapa-7.png" alt="Mapa wschodniego wybrzeża" onerror="this.onerror=null;this.src='https://maps.wikimedia.org/img/osm-intl,10,39.63,3.39,800x360.png?lang=en';">
@@ -335,16 +339,16 @@
 
         <h4 class="block">Do zobaczenia</h4>
         <ul>
-          <li><b>Sa Calobra i wąwóz Torrent de Pareis</b> — zatoka otoczona 200-metrowymi klifami, ujście słynnego wąwozu (trekking ~3 km, kamienisty — „iść do końca”). Dojazd „drogą węża” <b>MA-2141</b>: 12 km i 26 zakrętów, w tym pętla 270°. <a href="https://maps.app.goo.gl/P7uqfHYhQWByZWKZ8" target="_blank">Mapa →</a></li>
+          <li><b>Sa Calobra i wąwóz Torrent de Pareis</b> <span class="pin">📍</span> — zatoka otoczona 200-metrowymi klifami, ujście słynnego wąwozu (trekking ~3 km, kamienisty — „iść do końca”). Dojazd „drogą węża” <b>MA-2141</b>: 12 km i 26 zakrętów, w tym pętla 270°. <a href="https://maps.app.goo.gl/P7uqfHYhQWByZWKZ8" target="_blank">Mapa →</a></li>
           <li><b>Jeziora Cúber i Gorg Blau</b> — sztuczne jeziora na ~700 m n.p.m. wśród szczytów.</li>
-          <li><b>Santuari de Lluc</b> <span class="new">🆕</span> — klasztor Lluc (z listy „Lluc i Son Macip”), duchowe centrum Majorki, w górach Escorca.</li>
+          <li><b>Santuari de Lluc</b> <span class="pin">📍</span> — klasztor Lluc (z listy „Lluc i Son Macip”), duchowe centrum Majorki, w górach Escorca.</li>
           <li><b>Coves de Campanet</b> — mało uczęszczana jaskinia, ~40 min, 17 €. <a href="https://www.covesdecampanet.com/en/visit" target="_blank">covesdecampanet.com</a></li>
         </ul>
 
         <div class="day-map"><img src="mapy/mapa-6.png" alt="Mapa Sa Calobra" onerror="this.onerror=null;this.src='https://maps.wikimedia.org/img/osm-intl,10,39.850,2.800,800x360.png?lang=en';">
           <div class="cap">📍 Sa Calobra i Lluc — <a href="https://www.google.com/maps/search/?api=1&query=Sa+Calobra" target="_blank">otwórz w Google Maps</a> · mapa © OpenStreetMap</div></div>
 
-        <div class="info"><b>Wariant dla wprawionych:</b> <b>Puig de Massanella</b> <span class="new">🆕</span> (1364 m, drugi co do wysokości dostępny szczyt; szlak ~12 km) — zamiast jaskini Campanet, jeśli wolicie całodniową górską wycieczkę.</div>
+        <div class="info"><b>Wariant dla wprawionych:</b> <b>Puig de Massanella</b> <span class="pin">📍</span> (1364 m, drugi co do wysokości dostępny szczyt; szlak ~12 km) — zamiast jaskini Campanet, jeśli wolicie całodniową górską wycieczkę.</div>
         <div class="tip"><b>Jedzenie w Sa Calobra:</b> omijaj bary samoobsługowe (słaba jakość) — zabierz prowiant albo zjedz w Sóller/Caimari.</div>
       </div>
     </div>
@@ -365,9 +369,9 @@
           <span class="chip">🕐 na lotnisku ~2 h przed odlotem</span>
         </div>
         <ul>
-          <li><b>Rano:</b> wykwaterowanie (depozyt bagażu w recepcji) i przejazd na <b>Es Trenc</b> (~45 min) — dzika plaża bez kurortów, pożegnalna kąpiel. Parking ~8 €. <a href="https://maps.app.goo.gl/dCMvWBJTo2z2fboJ8" target="_blank">Mapa →</a></li>
+          <li><b>Es Trenc</b> <span class="pin">📍</span> rano — dzika plaża bez kurortów, pożegnalna kąpiel. Parking ~8 €. <a href="https://maps.app.goo.gl/dCMvWBJTo2z2fboJ8" target="_blank">Mapa →</a></li>
           <li><b>Alternatywa bliżej bazy:</b> Port d'Andratx + Sant Elm + rejs na Sa Dragonera, potem plaża Santa Ponsa.</li>
-          <li><b>Alternatywa rodzinna:</b> <b>Palma Aquàrium</b> (blisko lotniska), jeśli nie było go 7.10.</li>
+          <li><b>Alternatywa rodzinna:</b> <b>Palma Aquàrium</b> <span class="pin">📍</span> (blisko lotniska), jeśli nie było go 7.10.</li>
           <li><b>~18:30–19:00</b> — oddanie auta na lotnisku (pełny bak, zdjęcia przy zwrocie).</li>
           <li><b>~19:30</b> — odprawa i kontrola; bądź na miejscu ok. 2 h przed odlotem.</li>
         </ul>
@@ -382,20 +386,20 @@
     <h2 class="section">💰 Bilety i parkingi — orientacyjnie</h2>
     <table>
       <tr><th>Atrakcja</th><th>Cena (os.)</th><th>Uwagi</th></tr>
-      <tr><td>Katedra La Seu</td><td>~10 €</td><td>bilet online z wyprzedzeniem</td></tr>
+      <tr><td>Katedra La Seu 📍</td><td>~10 €</td><td>bilet online z wyprzedzeniem</td></tr>
       <tr><td>Palau de l'Almudaina</td><td>~10 €</td><td>bilet online</td></tr>
       <tr><td>Zamek Bellver</td><td>~5 €</td><td>sprawdź godziny otwarcia</td></tr>
-      <tr><td>Palma Aquàrium</td><td>~28 €</td><td>bilet online, rodziny taniej</td></tr>
+      <tr><td>Palma Aquàrium 📍</td><td>~28 €</td><td>bilet online, rodziny taniej</td></tr>
       <tr><td>Pociąg/tramwaj Sóller (opcjonalnie)</td><td>~35 €</td><td>trendesoller.com</td></tr>
-      <tr><td>Szlak Arcyksięcia / Barranc de Biniaraix</td><td>bezpłatny</td><td>parking przy starcie</td></tr>
-      <tr><td>Cuevas del Drach</td><td>~17–18 €</td><td>rezerwacja na godzinę</td></tr>
-      <tr><td>Coves d'Artà</td><td>16 €</td><td>z przewodnikiem</td></tr>
-      <tr><td>Ses Païsses</td><td>~6 €</td><td>muzeum archeologiczne</td></tr>
-      <tr><td>Castell de Capdepera</td><td>~3–4 €</td><td>zamek</td></tr>
-      <tr><td>Safari Mallorca</td><td>~23 €</td><td>opcjonalnie</td></tr>
+      <tr><td>Szlak Arcyksięcia / Barranc de Biniaraix 📍</td><td>bezpłatny</td><td>parking przy starcie</td></tr>
+      <tr><td>Cuevas del Drach 📍</td><td>~17–18 €</td><td>rezerwacja na godzinę</td></tr>
+      <tr><td>Coves d'Artà 📍</td><td>16 €</td><td>z przewodnikiem</td></tr>
+      <tr><td>Ses Païsses 📍</td><td>~6 €</td><td>muzeum archeologiczne</td></tr>
+      <tr><td>Castell de Capdepera 📍</td><td>~3–4 €</td><td>zamek</td></tr>
+      <tr><td>Safari Mallorca 📍</td><td>~23 €</td><td>opcjonalnie</td></tr>
       <tr><td>Coves de Campanet</td><td>17 €</td><td>~40 min</td></tr>
-      <tr><td>Parking Es Trenc</td><td>~8 €</td><td>dzień</td></tr>
-      <tr><td>Parking Platja de Formentor</td><td>płatny</td><td>mała pojemność</td></tr>
+      <tr><td>Parking Es Trenc 📍</td><td>~8 €</td><td>dzień</td></tr>
+      <tr><td>Parking Platja de Formentor 📍</td><td>płatny</td><td>mała pojemność</td></tr>
     </table>
 
     <h2 class="section">🧭 Praktyczne wskazówki</h2>
@@ -409,7 +413,7 @@
 
     <h2 class="section">✅ Checklista przed wyjazdem</h2>
     <ul>
-      <li>Zarezerwuj: <b>Katedra La Seu</b>, <b>Almudaina</b>, <b>Cuevas del Drach</b> i ewentualnie <b>Palma Aquàrium</b>.</li>
+      <li>Zarezerwuj: <b>Katedra La Seu</b> 📍, <b>Almudaina</b>, <b>Cuevas del Drach</b> 📍 i ewentualnie <b>Palma Aquàrium</b> 📍.</li>
       <li>Sprawdź kaucję i polisę ubezpieczenia w wypożyczalni aut.</li>
       <li>Pobierz mapy offline + zapisz linki do miejsc (są w tym dokumencie).</li>
       <li>Spakuj: buty trekkingowe (szlaki!), kurtkę przeciwdeszczową, strój kąpielowy, adapter (gniazdka typ F — polskie pasują).</li>
@@ -419,7 +423,7 @@
   <div class="foot">
     <h2>📌 Źródła i o tym dokumencie</h2>
     <ul>
-      <li><b>Twoja lista Google Maps „Majorka” (28 miejsc)</b> — wszystkie pinezki wplecione w plan; nowe pozycje oznaczone 🆕.</li>
+      <li><b>Twoja lista Google Maps „Majorka” (28 miejsc)</b> — wszystkie pinezki wplecione w plan i oznaczone 📍.</li>
       <li>Blogi: <a href="https://wygodniwpodrozy.pl/blog/majorka-w-7-dni/" target="_blank">Wygodni w Podróży</a>, <a href="https://idziemydalej.pl/majorka-subiektywny-przewodnik/" target="_blank">Idziemy Dalej</a>, <a href="https://zlukaszem.pl/majorka-co-zobaczyc-przewodnik/" target="_blank">zLukaszem.pl</a>, <a href="https://www.gancarczyk.com/majorka-atrakcje-zwiedzanie-wynajem-samochodu-informacje-praktyczne-przewodnik/" target="_blank">Gancarczyk</a>, <a href="https://r.pl/blog/majorka-atrakcje-co-zobaczyc" target="_blank">Rainbow</a>, <a href="https://bartekwpodrozy.pl/glowne-atrakcje-majorki-w-trzy-dni-czy-to-mozliwe/" target="_blank">Bartek w Podróży</a>, <a href="https://hispanico.pl/majorka-atrakcje/" target="_blank">Hispanico</a>, <a href="https://podrozezycia.pl/majorka-co-warto-zobaczyc-10-najlepszych-atrakcji-wyspy/" target="_blank">Podróże Życia</a>.</li>
     </ul>
     <p class="note">📷 Zdjęcia: <b>Wikimedia Commons</b> (licencje Creative Commons). 🗺️ Mapy: <b>© OpenStreetMap</b>. Aby wkleić do Google Docs: otwórz plik w przeglądarce → Ctrl+A → Ctrl+C → wklej do Google Docs (Ctrl+V).</p>
